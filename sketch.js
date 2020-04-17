@@ -702,7 +702,7 @@ console.log("add:"+currentClass)
     '<br>'+
         '<div class="div" id = "div' + counter + '">' +
 	      '<div class="q" id = "q' + counter +
-        '">Que voulez-vous compter ?</div>'+
+        '">What do you want to count? ?</div>'+
         '<input class = text1 type="text" name="textfield' + counter
         + '" id="myText'+ counter +'" value="">'+
 
@@ -716,18 +716,18 @@ console.log("add:"+currentClass)
         '"value ="" disabled></input>'+
 
          '<button class="submit" onclick="myFunction()" id="submit'+counter+
-        '">Valider</button>'+
+        '">Confirm</button>'+
         // '<br><br><br><br>'+
         '<button id="class' + counter
          + '" class="button">Editer</button>'  +
           '<div class="q" id = "qb'+counter+
-         '">Après combien de fois voulez déclencher une action ?</div> <input class = email type="text" name="email'
+         '">After how many times do you want to trigger an action?</div> <input class = email type="text" name="email'
          + counter + '" id="myEmail' + counter + '" value="">'
          + '<button class="submit" onclick="yourFunction()" id="submitb'+counter+
-         '">Valider</button>' +
+         '">Confirm</button>' +
 //
          '<div class="q" id = "qc'+counter+
-        '">Quelle action voulez-vous assigner à ce son ?</div>' +
+        '">What action do you want to assign to this sound?</div>' +
 
         '<button class=" choice" onclick="tweetPage()" id="tweetButton'+counter+
         '">Tweet</button>' +
@@ -744,7 +744,7 @@ console.log("add:"+currentClass)
        + counter + '" id="tweet' + counter + '" cols="40" rows="3" ></textarea>'
 
        + '<button class="submit" onclick="postTweet()" id="submitTweet'+counter+
-       '">Valider</button>' +
+       '">Confirm</button>' +
 
        '<div class="q" id = "qe'+counter+
       '">Email</div>'+
@@ -759,7 +759,7 @@ console.log("add:"+currentClass)
       + counter + '" id="message' + counter + '" cols="40" rows="3"></textarea>'
 
       + '<button class="submit" onclick="sendEmail()" id="submitEmail'+counter+
-      '">Valider</button>' +
+      '">Confirm</button>' +
 
          '</div>'
 
@@ -1081,8 +1081,8 @@ document.getElementById('TextBoxesGroup').style.width = '100%';
 
       }
       document.getElementById('class0').style.display = 'inline-block';
-      document.getElementById('_save').style.display = 'inline-block';
-      document.getElementById('_load').style.display = 'inline-block';
+    //  document.getElementById('_save').style.display = 'inline-block';
+    //  document.getElementById('_load').style.display = 'inline-block';
       document.getElementById('record').style.display = 'none';
       document.getElementById('addButton').style.display = 'inline-block';
       if (counter>0){
