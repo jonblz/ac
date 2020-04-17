@@ -37,7 +37,7 @@ var count  = [0,counter1,counter2,counter3,counter4,counter5,counter6,counter7,c
 var et  = [0,counter1,counter2,counter3,counter4,counter5,counter6,counter7,counter8,counter9,counter10,counter11,counter12,counter13,counter14,counter15];
 
 //TRIGGER MODE
-var predictionAlpha = 255;
+var predictionAlphemail= 255;
 
 var singleTrigger = true;
 var startTime;
@@ -386,6 +386,7 @@ for (var j = 1; j <= counter; j++){
            // document.getElementById('class'+j).style.display = 'none';
            //document.getElementById('textb'+j).style.display = 'none';
            // document.getElementById('texta'+j).style.display = 'none';
+           document.getElementById('div'+counter).style.background = "none";
            document.getElementById('div'+j).style.borderWidth = '0px';
            // document.getElementById('div'+j).style.backgroundColor = "white";
             document.getElementById('TextBoxDiv'+j).style.display = 'none';
@@ -400,6 +401,7 @@ for (var j = 1; j <= counter; j++){
 
 
 }
+
         document.getElementById('TextBoxDiv'+currentClass).style.display = 'inline-block';
         document.getElementById('TextBoxDiv'+currentClass).style.width = '100%';
         document.getElementById('TextBoxDiv'+currentClass).style.margin = '0%';
@@ -416,6 +418,7 @@ for (var j = 1; j <= counter; j++){
          document.getElementById('div'+currentClass).style.display = 'inline-block';
          document.getElementById('submit'+currentClass).style.display = 'inline-block';
          document.getElementById('div'+currentClass).style.borderWidth = '0px';
+         document.getElementById('div'+counter).style.background = "none";
          document.getElementById('defaultCanvas0').style.display = 'none';
          // document.getElementById('div'+currentClass).style.backgroundColor = "white";
           //document.getElementById('TextBoxDiv'+currentClass).style.display = 'none';
@@ -702,7 +705,7 @@ console.log("add:"+currentClass)
     '<br>'+
         '<div class="div" id = "div' + counter + '">' +
 	      '<div class="q" id = "q' + counter +
-        '">What do you want to count? ?</div>'+
+        '">What do you want to count ?</div>'+
         '<input class = text1 type="text" name="textfield' + counter
         + '" id="myText'+ counter +'" value="">'+
 
@@ -719,15 +722,15 @@ console.log("add:"+currentClass)
         '">Confirm</button>'+
         // '<br><br><br><br>'+
         '<button id="class' + counter
-         + '" class="button">Editer</button>'  +
+         + '" class="button">Edit</button>'  +
           '<div class="q" id = "qb'+counter+
-         '">After how many times do you want to trigger an action?</div> <input class = email type="text" name="email'
+         '">After how many times do you want to trigger an action ?</div> <input class = email type="text" name="email'
          + counter + '" id="myEmail' + counter + '" value="">'
          + '<button class="submit" onclick="yourFunction()" id="submitb'+counter+
          '">Confirm</button>' +
 //
          '<div class="q" id = "qc'+counter+
-        '">What action do you want to assign to this sound?</div>' +
+        '">What action do you want to assign to this sound ?</div>' +
 
         '<button class=" choice" onclick="tweetPage()" id="tweetButton'+counter+
         '">Tweet</button>' +
@@ -749,13 +752,13 @@ console.log("add:"+currentClass)
        '<div class="q" id = "qe'+counter+
       '">Email</div>'+
 
-      '<input placeholder="A" class = destinataire type="text" name="destinataire'
+      '<input placeholder="To" class = destinataire type="text" name="destinataire'
       + counter + '" id="destinataire' + counter + '" value="">'
 
       // '<input class = message type="text" name="message'
       // + counter + '" id="message' + counter + '" value="">'+
 
-      +'<textarea placeholder="message" class = "message" name="message'
+      +'<textarea placeholder="Message" class = "message" name="message'
       + counter + '" id="message' + counter + '" cols="40" rows="3"></textarea>'
 
       + '<button class="submit" onclick="sendEmail()" id="submitEmail'+counter+
@@ -772,6 +775,7 @@ console.log("add:"+currentClass)
 // --------------------------------------- premiere question -> que voulez vous compter ?
 
   for (var i=1; i < counter; i++){
+
     document.getElementById('div'+i).style.display = 'none';
     document.getElementById('q'+i).style.display = 'none';
     document.getElementById('qb'+i).style.display = 'none';
@@ -794,6 +798,7 @@ console.log("add:"+currentClass)
     document.getElementById('textb'+i).style.display = 'none';
     document.getElementById('texta'+i).style.display = 'none';
     document.getElementById('div'+i).style.borderWidth = '0px';
+    document.getElementById('div'+counter).style.background = "none";
     // document.getElementById('div'+i).style.backgroundColor = "white";
      document.getElementById('TextBoxDiv'+i).style.display = 'none';
 
@@ -847,6 +852,12 @@ document.getElementById('removeButton').style.display = 'none';
           alert("No more textbox to remove");
           return false;
        }
+
+if(counter == 1 ){
+
+     document.getElementById('removeButton').style.display = 'none';
+}
+
 
 
 
@@ -1015,7 +1026,7 @@ console.log(currentClass);
     // document.getElementById('defaultCanvas0').style.display = 'inline-block';
     // document.getElementById('defaultCanvas0').style.backgroundColor = "#ff7a00 ";
   }
-// --------------------------------------- stop rec -> retour à la page d'acceuil
+// --------------------------------------- stop rec -> retour à lemailpage d'acceuil
   else if (pressed == true){
     // tweet("tweetTest3");
     document.getElementById('record').className = 'record'
@@ -1068,7 +1079,7 @@ document.getElementById('TextBoxesGroup').style.width = '100%';
           document.getElementById('p'+i).style.display = 'inline-block';
           // document.getElementById('class'+i).style.display = 'inline-block'
 
-
+// document.getElementById('div'+counter).style.background = "#52667a";
           document.getElementById('div'+i).style.borderWidth = '1px';
           // document.getElementById('div'+i).style.backgroundColor = "white";
           document.getElementById('TextBoxDiv'+i).style.display = 'inline-block';
@@ -1081,8 +1092,8 @@ document.getElementById('TextBoxesGroup').style.width = '100%';
 
       }
       document.getElementById('class0').style.display = 'inline-block';
-    //  document.getElementById('_save').style.display = 'inline-block';
-    //  document.getElementById('_load').style.display = 'inline-block';
+      document.getElementById('_save').style.display = 'inline-block';
+      document.getElementById('_load').style.display = 'inline-block';
       document.getElementById('record').style.display = 'none';
       document.getElementById('addButton').style.display = 'inline-block';
       if (counter>0){
