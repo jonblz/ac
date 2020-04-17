@@ -37,7 +37,7 @@ var count  = [0,counter1,counter2,counter3,counter4,counter5,counter6,counter7,c
 var et  = [0,counter1,counter2,counter3,counter4,counter5,counter6,counter7,counter8,counter9,counter10,counter11,counter12,counter13,counter14,counter15];
 
 //TRIGGER MODE
-var predictionAlphemail= 255;
+var predictionAlpha = 255;
 
 var singleTrigger = true;
 var startTime;
@@ -853,11 +853,11 @@ document.getElementById('removeButton').style.display = 'none';
           return false;
        }
 
-if(counter == 1 ){
-
-     document.getElementById('removeButton').style.display = 'none';
-}
-
+// if(counter == 1 ){
+//
+//      document.getElementById('removeButton').style.display = 'none';
+// }
+//
 
 
 
