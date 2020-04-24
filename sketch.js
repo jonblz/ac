@@ -743,7 +743,7 @@ console.log("add:"+currentClass)
        // '<input class = "tweet" type="text" name="tweet'
        // + counter + '" id="tweet' + counter + '" value="">'
 
-       '<textarea class = "tweet" name="tweet'
+       '<input placeholder="Posted on @JonBlz05" class = "tweet" name="tweet'
        + counter + '" id="tweet' + counter + '" cols="40" rows="3" ></textarea>'
 
        + '<button class="submit" onclick="postTweet()" id="submitTweet'+counter+
